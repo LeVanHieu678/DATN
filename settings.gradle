@@ -1,0 +1,2 @@
+rootProject.name = "videoCallDATN"
+include ':app'

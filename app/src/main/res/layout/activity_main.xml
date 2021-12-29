@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/video_call"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textStyle="bold"
+            android:id="@+id/tv_user_name"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/user_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_header"
+            android:layout_marginTop="50dp"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:background="@drawable/bg_drawable"
+            android:id="@+id/edt_user_name"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingVertical="@dimen/cardview_default_radius"
+            app:layout_constraintEnd_toStartOf="@id/btn_login"
+            app:layout_constraintStart_toStartOf="@id/tv_user_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_user_name" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:clickable="true"
+            android:id="@+id/btn_login"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:src="@drawable/ic_btn_login"
+            app:layout_constraintBottom_toBottomOf="@id/edt_user_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edt_user_name"
+            app:layout_constraintTop_toTopOf="@id/edt_user_name" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:paddingBottom="60dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginStart="30dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_gradient_button_call_group"/>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginStart="30dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_gradient_button_call_group"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

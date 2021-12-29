@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">videoCallDATN</string>
+    <string name="video_call">Video Call</string>
+    <string name="user_name">Tên Người Dùng</string>
+</resources>
